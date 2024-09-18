@@ -1,0 +1,165 @@
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-primary-300: hsl(281, 83%, 54%);
+  --clr-primary-400: hsl(275, 100%, 97%);
+  --clr-primary-600: hsl(292, 16%, 49%);
+  --clr-primary-700: hsl(292, 42%, 14%);
+  --ff-default: 'Work Sans', sans-serif;
+  --fs-base: 1rem;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: var(--ff-default);
+  font-size: var(--fs-base);
+  text-align: left;
+  background: url(assets/images/background-pattern-mobile.svg) no-repeat,
+    var(--clr-primary-400);
+  background-size: 100%;
+  padding: 1.5rem;
+  color: var(--clr-primary-700);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+  text-align: inherit;
+  color: var(--clr-primary-700);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+.accordion {
+  background-color: var(--clr-neutral-100);
+  margin-inline: 1rem;
+  padding: 2.5rem 2.5rem 1.25rem;
+  max-width: 30rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 24px hsla(292, 42%, 14%, 0.2);
+}
+
+.accordion__header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  font-size: 2.25rem;
+  font-weight: var(--fw-bold);
+}
+
+.accordion-panel {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  padding: 1.5rem 0;
+}
+
+.accordion-panel:last-child {
+  border-bottom: none;
+}
+
+.accordion__question {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  align-items: center;
+  line-height: 1.5;
+  font-weight: var(--fw-bold);
+}
+
+.accordion__question:hover {
+  color: var(--clr-primary-300);
+  cursor: pointer;
+}
+
+.accordion__text {
+  color: var(--clr-primary-600);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+
+.accordion__text p {
+  overflow: hidden;
+}
+
+.accordion__text.open {
+  grid-template-rows: 1fr;
+}
+
+.icons {
+  height: 31px;
+  width: 30px;
+}
+
+.minus-icon {
+  display: none;
+}
+
+@media (min-width: 765px) {
+  body {
+    background: url(assets/images/background-pattern-desktop.svg) no-repeat,
+      var(--clr-primary-400);
+  }
+}
