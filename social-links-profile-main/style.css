@@ -1,0 +1,137 @@
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(0, 0%, 20%);
+  --clr-neutral-400: hsl(0, 0%, 12%);
+  --clr-neutral-800: hsl(0, 0%, 8%);
+
+  --fs-base: 0.875rem;
+  --ff-default: 'Inter', sans-serif;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-default);
+  background-color: var(--clr-neutral-800);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+.profile {
+  max-width: 24rem;
+  background-color: var(--clr-neutral-400);
+  color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+picture {
+  display: grid;
+  place-content: center;
+  margin-bottom: 1.875rem;
+}
+
+.profile__img {
+  border-radius: 50%;
+  width: 5.7rem;
+}
+
+.profile__heading {
+  font-weight: var(--fw-bold);
+  margin-bottom: 1rem;
+  font-weight: var(--fw-regular);
+}
+
+.profile__location {
+  color: var(--clr-green);
+  margin-bottom: 1.875rem;
+  display: block;
+  font-weight: var(--fw-semi-bold);
+}
+
+.profile__position {
+  color: hsla(0, 0%, 100%, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+li {
+  background-color: var(--clr-neutral-300);
+  border-radius: 0.25rem;
+  padding: 0.75rem 7rem;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: var(--clr-green);
+  color: var(--clr-neutral-300);
+}
+
+button {
+  background: transparent;
+  text-wrap: nowrap;
+  border: 0;
+  font-weight: var(--fw-semi-bold);
+}
+button:hover {
+  cursor: pointer;
+}
