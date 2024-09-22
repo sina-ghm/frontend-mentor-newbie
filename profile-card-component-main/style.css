@@ -1,0 +1,155 @@
+:root {
+  --clr-primary-400: hsl(185, 75%, 39%);
+  --clr-primary-800: hsl(229, 23%, 23%);
+  --clr-primary-300: hsl(227, 10%, 46%);
+  --clr-neutral-200: hsl(0, 11%, 89%);
+
+  --ff-base: "Kumbh Sans", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fs-base: 1.125rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-base);
+  font-size: 1.125rem;
+  font-weight: var(--fw-regular);
+  margin: 1rem;
+  background-color: var(--clr-primary-400);
+  background-image: url('images/bg-pattern-top.svg'),url('images/bg-pattern-bottom.svg') ;
+  background-repeat: no-repeat,no-repeat;
+  background-size: contain;
+  background-position: right 53vw bottom 75vh,left 51vw top 50vh;
+}
+
+.section__card {
+  max-width: 21.875rem;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.card__body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1.5rem 2rem;
+  background-color: var(--clr-neutral-200);
+}
+
+.card__img img{
+  border-radius: 50%;
+  border: 5px solid var(--clr-neutral-200);
+  
+}
+
+.card__img {
+  place-self: center;
+  margin-top: calc(-6.6rem / 2);
+}
+
+.card__info {
+  display: grid;
+  gap: .5rem;
+  text-align: center;
+}
+
+h1 span,p {
+color: var(--clr-primary-300);
+}
+
+h1 span {
+  font-weight: var(--fw-regular);
+  font-size: 1.5rem;
+}
+
+
+ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3125rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+}
+
+@media (min-width: 23rem){
+body {
+  background-position: right 49vw bottom 70vh,left 51vw top 50vh;
+}
+}
