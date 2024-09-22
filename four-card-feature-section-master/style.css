@@ -1,0 +1,161 @@
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --clr-primary-600: hsl(234, 12%, 34%);
+  --clr-primary-400: hsl(229, 6%, 66%);
+  --clr-neutral-200: hsl(0, 0%, 98%);
+
+  --ff-base: "Poppins", sans-serif;
+  --fs-base: 0.9375rem;
+  --fw-regular: 200;
+  --fw-semibold: 400;
+  --fw-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.4;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-base);
+  background-color: var(--clr-neutral-200);
+  margin: 2rem;
+  color: var(--clr-primary-400);
+}
+
+header {
+  display: grid;
+  gap: 1rem;
+  width: 45%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.card__header {
+  font-size: 1.5rem;
+}
+.card__header span {
+  display: block;
+  color: var(--clr-primary-600);
+}
+
+
+.section__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.card{
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  box-shadow: 4px 10px 5px rgba(0,0,0,.1);
+  border-radius: .5rem;
+  max-width: 22rem;
+  min-height:15rem ;
+}
+
+h2 {
+  color: var(--clr-primary-600);
+}
+.flex-group {
+  display: grid;
+  gap: 2rem;
+}
+.card__supervisor{
+border-top: 5px solid var(--clr-cyan);
+}
+.card__team{
+border-top: 5px solid var(--clr-red);
+}
+.card__karma{
+border-top: 5px solid var(--clr-orange);
+}
+.card__calc{
+border-top: 5px solid var(--clr-blue);
+}
+
+.card img {
+  justify-self: end;
+}
+
+
+@media(min-width:950px) {
+  .section__cards {
+    flex-direction: row;
+    max-width: 69.375rem;
+
+  }
+
+  .card__supervisor,.card__calc {
+    align-self: center;
+  }
+}
