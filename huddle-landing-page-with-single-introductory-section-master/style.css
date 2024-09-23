@@ -1,0 +1,167 @@
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-magenta: hsl(300, 69%, 71%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --ff-400: "Open Sans", sans-serif;
+  --ff-600: "Poppins", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--ff-400);
+  font-weight: var(--fw-regular);
+  background-color: var(--clr-violet);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--clr-neutral-100);
+}
+
+.huddle {
+  background-image: url("images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  display: grid;
+  max-width: 23.4375rem;
+  margin-inline: 1rem;
+  align-content: start;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.grid-flow[spacing="large"] {
+  gap: 3rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-flow {
+  display: grid;
+  gap: 2rem;
+}
+
+.illustration {
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semi-bold);
+  line-height: 1.5;
+}
+
+.text {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+}
+
+.button {
+  width: 12rem;
+  margin-inline: auto;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  color: var(--clr-violet);
+  border-radius: 100vw;
+  border: 0;
+  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: var(--clr-magenta);
+  color: var(--clr-neutral-100);
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.fa-brands {
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  padding: 0.5rem;
+  border: 0.5px solid var(--clr-neutral-100);
+  border-radius: 50%;
+}
+
+.fa-brands:hover {
+  color: var(--clr-magenta);
+  border: 0.5px solid var(--clr-magenta);
+}
+
+@media (min-width: 54rem) {
+  .huddle {
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    max-width: 100vw;
+    padding: 3.5rem 3.5rem 2.5rem 3.5rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    text-align: start;
+  }
+
+  .title {
+    font-size: var(--fs-800);
+  }
+
+  .grid-flow {
+    align-content: start;
+  }
+
+  .grid-flow[spacing="large"]:not(last-child) {
+    gap: 5rem;
+  }
+
+  .text-box {
+    padding: 2rem 2rem 2rem 0;
+  }
+
+  .text {
+    font-size: var(--fs-500);
+  }
+
+  .button {
+    max-width: 13rem;
+    margin-inline: 0;
+  }
+
+  ul {
+    justify-content: flex-end;
+  }
+}
