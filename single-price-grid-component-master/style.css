@@ -1,0 +1,166 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #eee;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 1rem;
+}
+
+.container {
+    width: 18.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header section */
+
+.header {
+    background-color: #fff;
+}
+
+.header, .cta, .footer {
+    padding: 1.5rem;
+}
+
+.main-heading {
+    color: var(--cyan);
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.subheading {
+    display: inline-block;
+    color: var(--bright-yellow);
+    font-size: 1.125rem;
+    margin-bottom: .875rem;
+    font-weight: 700;
+
+}
+
+.main-paragraph {
+    color: var(--grayish-blue);
+    line-height: 1.6;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+/* cta section */
+
+.cta {
+    background-color: var(--cyan);
+    color: #fff;
+}
+
+.price-heading {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+.money {
+    font-size: 1.875rem;
+    color: #fff;
+}
+
+.price-text {
+    color: #e6e6e6;
+    font-size: .875rem;
+}
+
+.description {
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    font-size: .875rem;
+    color: #fff;
+    width: 100%;
+    padding: .875rem;
+    background-color: var(--bright-yellow);
+    border-style: none;
+    border-radius: .3125rem;
+}
+
+/* footer section */
+
+.footer {
+    background-color: #3fbab7;
+
+    color: #fff;
+}
+
+.footer-heading {
+    font-size:1rem;
+    margin-bottom: 1rem;
+}
+
+.list {
+    color: #e6e6e6;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.list li {
+    font-size:.75rem;
+}
+
+/* media queries */
+
+/* for devices with 768px and higher resolution */
+
+@media (min-width: 48em) {
+    .container {
+        width: 37.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .header, .cta, .footer {
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    .header {
+        grid-column: span 2;
+        padding-right: 2rem;
+    }
+
+    .cta {
+        padding-right: 2rem;
+    }
+
+    .footer {
+        padding-right: 3rem;
+    }
+
+}
+
+
+.author p{
+    font-size: .875rem;
+}
