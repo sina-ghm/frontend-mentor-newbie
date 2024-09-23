@@ -59,8 +59,8 @@ Frontend Mentor have 2 profile plans: Free and Premium.
 
 ### Author
 
-- Frontend Mentor - [sina ghadimi](https://www.frontendmentor.io/profile/sina-ghadimi)
+- Frontend Mentor - [sina ghadimi](https://www.frontendmentor.io/profile/sina-ghm)
 
-- Github - [sina ghadimi](https://github.com/sina-ghadimi)
+- Github - [sina ghadimi](https://github.com/sina-ghm)
 
-- Twitter - [sina ghadimi](https://www.twitter.com/realsinaghadimi)
+- Twitter - [sina ghadimi](https://x.com/realsinaghadimi)
